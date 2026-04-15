@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Туры</h2>
+<p><a href="/new">+ Добавить тур</a></p>
+<ul>
+{% for t in tours %}
+<li><a href="/{{ t.id }}">{{ t.title }}</a> - {{ t.country }}, {{ t.price }} руб.</li>
+{% endfor %}
+</ul>
+{% endblock %}
